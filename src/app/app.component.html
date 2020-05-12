@@ -1,0 +1,13 @@
+<div class="app-container" fxLayout fxLayoutAlign="space-between" style="height: 100%">
+    <div class="inputs" fxLayout="column" fxLayoutAlign="top center" fxFlex="40%" style="margin-top: 100px">
+        <div *ngFor="let field of fields"  class="section__field" fxLayout="column" style="margin-top: 8px; width: 60%">
+            <label>{{ field.title }}</label>
+            <input [(ngModel)]="field.value">
+        </div>
+    </div>
+    <div style="background-color: gray; width: 1px"></div>
+    <div fxFlex="59%">
+        <ngx-prosemirror [(content)]="content"></ngx-prosemirror>
+    </div>
+</div>
+
